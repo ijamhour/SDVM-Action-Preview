@@ -1,0 +1,2 @@
+{"run_id": "synthetic:sparse_run_001", "ts": "2026-01-15T11:00:01Z", "actor": "agent", "event_type": "step", "payload": {"note": "synthetic sparse fixture"}}
+{"broken_line_not_json

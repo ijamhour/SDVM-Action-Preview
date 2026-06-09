@@ -1,0 +1,89 @@
+name: Adapter request
+description: Request support for an observability source or export format (no implementation commitment)
+title: "[Adapter request]: "
+labels:
+  - adapter-request
+  - integration
+  - preview
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request consideration for a new or extended **offline adapter** direction.
+
+        **Important:**
+        - Filing this issue does **not** commit the project to implementation or a timeline.
+        - Do **not** send credentials, API keys, or confidential exports in this issue.
+        - **Live pull** from observability backends is **not** part of the current GitHub Action preview (public-safe preview + canonical JSONL).
+        - Prefer describing export **shape** and a **redacted sample** path or schema summary.
+
+  - type: input
+    id: source
+    attributes:
+      label: Observability / source
+      placeholder: "LangSmith, Phoenix/OpenInference, other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: export_format
+    attributes:
+      label: Export format available to you
+      description: JSON, JSONL, UI export, API snapshot description, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fields
+    attributes:
+      label: Fields or structures available
+      description: Trace IDs, spans, scores, metadata — high level, no secrets.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sample_available
+    attributes:
+      label: Do you have a desensitized sample you can describe?
+      options:
+        - "Yes — can share schema or redacted structure privately later"
+        - "Yes — can describe structure in this issue (no raw upload)"
+        - "No — request is exploratory"
+    validations:
+      required: true
+
+  - type: textarea
+    id: operational_goal
+    attributes:
+      label: Operational goal
+      description: What would you run through SDVM if this existed? (PRE diagnostics, iteration, pilot, etc.)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency (for prioritization only)
+      options:
+        - Exploring options
+        - Needed for upcoming pilot
+        - Blocking evaluation
+    validations:
+      required: true
+
+  - type: textarea
+    id: privacy_constraints
+    attributes:
+      label: Privacy / compliance constraints
+      description: Data residency, no cloud upload, offline-only, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: no_secrets_confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I did not include credentials or confidential customer data in this issue
+    validations:
+      required: true

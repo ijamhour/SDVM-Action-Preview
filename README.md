@@ -1,0 +1,107 @@
+# SDVM Action Preview
+
+SDVM is a diagnostic layer for long-horizon agentic workflows. This repository distributes the **public-safe SDVM Action Preview slice** — a reduced package for validating **canonical JSONL** evidence shape, detecting PRE/POST/DELTA plausibility, and generating a **limited preview report**.
+
+This package is a **preview** for evidence structure validation, synthetic examples, and pilot screening support. It is **not** the full SDVM engine, **not** pilot-grade SDVM analysis, **not** a GitHub Marketplace publication, **not** a hosted SaaS product, and **not** a claim of commercial maturity. Scoring internals, statistical methodology, playbooks, and calibration logic remain private.
+
+## Quick start
+
+Pin the Action at the current preview tag (when published from this repository):
+
+```yaml
+name: SDVM Preview
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sdvm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run SDVM Action Preview
+        uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-v0.2
+        with:
+          mode: preview-report
+          evidence_path: path/to/canonical.jsonl
+          out_dir: sdvm_preview_artifacts
+          write_job_summary: "true"
+```
+
+**Artifacts** (under `out_dir`): `preview_report.md`, `preview_report.json`, `validation.json`, `job_summary.md`.
+
+## What you need
+
+- Runner-local **canonical JSONL** (public evidence interchange shape) at `evidence_path`
+- A GitHub Actions workflow with at least `contents: read` (the example uses `workflow_dispatch`)
+- Python 3.10+ on the runner (`actions/setup-python` recommended)
+
+For a **synthetic smoke fixture**, use `examples/synthetic/healthy/canonical.jsonl`.
+
+## Self-test
+
+After checkout, from repository root:
+
+```bash
+pip install -e .
+python -m sdvm_action_preview.cli \
+  --mode preview-report \
+  --input examples/synthetic/healthy/canonical.jsonl \
+  --output sdvm_preview_out
+```
+
+CI smoke: `.github/workflows/sdvm-action-self-test.yml` (uses `uses: ./` at repository root).
+
+## Preview limits
+
+- Modes: **`validate-only`**, **`preview-report`**, **`synthetic`** — not full SDVM diagnosis.
+- **Non-blocking** screening report; execution errors fail the step.
+- No SDVM scores, weights, thresholds, statistical methodology, or playbook logic.
+- No autonomous tuning, causal diagnosis, or guaranteed improvement.
+- No external service calls, telemetry, PR comments, or repository writes.
+- Full pilot-grade SDVM analysis remains in controlled pilot work only.
+- Marketplace publication remains **on hold**.
+
+## Do not post publicly
+
+Do **not** include in GitHub Issues, PRs, or uploaded artifacts:
+
+- secrets, API keys, tokens, or credentials
+- private production traces or customer-identifying data
+- sponsor-identifying or prospect-identifying materials
+
+See [`SECURITY.md`](SECURITY.md) and [`SUPPORT.md`](SUPPORT.md).
+
+## Further reading
+
+- [`examples/github_action_workflow/README.md`](examples/github_action_workflow/README.md) — copy-paste workflow and artifact upload
+- [`docs/ACTION_USAGE.md`](docs/ACTION_USAGE.md) — Action inputs, outputs, and job summary
+- [`docs/RELEASE_NOTES_V0_2.md`](docs/RELEASE_NOTES_V0_2.md) — release notes for `sdvm-action-preview-v0.2`
+- [`docs/MARKETPLACE_LISTING_COPY_V0_1.md`](docs/MARKETPLACE_LISTING_COPY_V0_1.md) — draft listing copy (not published)
+- [`examples/synthetic/`](examples/synthetic/) — public-safe synthetic preview fixtures
+
+## Public links
+
+| URL | Role |
+|-----|------|
+| https://sdvm.tech/ | Landing |
+| https://sdvm.tech/privacy/ | Privacy policy |
+| https://sdvm.tech/pilot/intake/ | Pilot intake template |
+| https://sdvm.tech/pilot/readiness-probe-example/ | Readiness probe example |
+
+## License
+
+Apache-2.0 — see [`LICENSE`](LICENSE).
+
+## Support and security
+
+- [`SUPPORT.md`](SUPPORT.md) — GitHub Issues (best-effort preview support)
+- [`SECURITY.md`](SECURITY.md) — vulnerability reporting

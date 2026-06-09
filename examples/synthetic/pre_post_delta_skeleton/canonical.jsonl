@@ -1,0 +1,5 @@
+{"run_id": "synthetic:workflow_pre_001", "ts": "2026-01-15T12:00:01Z", "actor": "agent", "event_type": "step", "payload": {"stage": "PRE", "note": "synthetic PRE fixture"}}
+{"run_id": "synthetic:workflow_pre_001", "ts": "2026-01-15T12:00:02Z", "actor": "agent", "event_type": "turn", "payload": {"stage": "PRE", "note": "synthetic PRE fixture"}}
+{"run_id": "synthetic:workflow_post_001", "ts": "2026-01-15T12:10:01Z", "actor": "agent", "event_type": "step", "payload": {"stage": "POST", "note": "synthetic POST fixture"}}
+{"run_id": "synthetic:workflow_post_001", "ts": "2026-01-15T12:10:02Z", "actor": "agent", "event_type": "turn", "payload": {"stage": "POST", "note": "synthetic POST fixture"}}
+{"run_id": "synthetic:workflow_delta_001", "ts": "2026-01-15T12:20:01Z", "actor": "reviewer", "event_type": "step", "payload": {"stage": "DELTA", "note": "synthetic DELTA skeleton"}}

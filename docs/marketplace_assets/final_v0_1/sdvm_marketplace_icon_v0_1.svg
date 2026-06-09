@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="SDVM coordination signal icon">
+  <title>SDVM</title>
+  <!-- Minimal coordination-grid / signal-trace motif; diagnostic, not remediation -->
+  <rect width="128" height="128" rx="20" fill="#1e2a32"/>
+  <!-- Baseline coordination path -->
+  <path d="M 32 64 L 64 36 L 96 64 L 64 92 Z" fill="none" stroke="#4a7c8f" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Drift-offset path (subtle) -->
+  <path d="M 32 64 L 68 40 L 96 64 L 64 88 Z" fill="none" stroke="#7eb8c9" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6 4" opacity="0.9"/>
+  <!-- Nodes -->
+  <circle cx="32" cy="64" r="7" fill="#5a9aad"/>
+  <circle cx="64" cy="36" r="7" fill="#5a9aad"/>
+  <circle cx="96" cy="64" r="7" fill="#5a9aad"/>
+  <circle cx="64" cy="92" r="7" fill="#5a9aad"/>
+  <!-- Central signal pulse -->
+  <circle cx="64" cy="64" r="5" fill="#c8e6ef"/>
+</svg>

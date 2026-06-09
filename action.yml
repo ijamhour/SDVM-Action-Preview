@@ -1,0 +1,79 @@
+name: SDVM Action Preview (public-safe)
+description: >
+  Validate canonical JSONL evidence shape and generate a limited preview report.
+  Screening-oriented only — not pilot-grade SDVM analysis.
+
+inputs:
+  evidence_path:
+    description: Path to canonical JSONL file or directory on the runner
+    required: true
+  mode:
+    description: validate-only | preview-report | synthetic
+    required: false
+    default: preview-report
+  run_label:
+    description: Optional label for the preview report
+    required: false
+    default: ""
+  out_dir:
+    description: Output directory for preview artifacts
+    required: false
+    default: sdvm_preview_artifacts
+  synthetic_example:
+    description: Synthetic example name when mode is synthetic (healthy, partial_evidence, pre_post_delta_skeleton)
+    required: false
+    default: healthy
+  write_job_summary:
+    description: Write job_summary.md and append to GITHUB_STEP_SUMMARY when present
+    required: false
+    default: "true"
+
+outputs:
+  preview_report_path:
+    description: Path to preview_report.md
+    value: ${{ steps.preview.outputs.preview_report_path }}
+  validation_path:
+    description: Path to validation.json
+    value: ${{ steps.preview.outputs.validation_path }}
+  artifacts_dir:
+    description: Artifact output directory
+    value: ${{ steps.preview.outputs.artifacts_dir }}
+  preview_mode:
+    description: Mode executed
+    value: ${{ steps.preview.outputs.preview_mode }}
+
+runs:
+  using: composite
+  steps:
+    - name: Install SDVM Action Preview
+      shell: bash
+      run: pip install -e "${{ github.workspace }}"
+
+    - name: Run SDVM Action Preview
+      id: preview
+      shell: bash
+      working-directory: ${{ github.workspace }}
+      run: |
+        set -euo pipefail
+        OUT_DIR="${{ inputs.out_dir }}"
+        MODE="${{ inputs.mode }}"
+        ARGS=(--mode "$MODE" --output "$OUT_DIR")
+        if [ "$MODE" = "synthetic" ]; then
+          ARGS+=(--synthetic-example "${{ inputs.synthetic_example }}")
+        else
+          ARGS+=(--input "${{ inputs.evidence_path }}")
+        fi
+        if [ -n "${{ inputs.run_label }}" ]; then
+          ARGS+=(--run-label "${{ inputs.run_label }}")
+        fi
+        python -m sdvm_action_preview.cli "${ARGS[@]}"
+        if [ "${{ inputs.write_job_summary }}" = "true" ] && [ -f "$OUT_DIR/preview_report.md" ]; then
+          cp "$OUT_DIR/preview_report.md" "$OUT_DIR/job_summary.md"
+          if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+            cat "$OUT_DIR/preview_report.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+        fi
+        echo "preview_report_path=$OUT_DIR/preview_report.md" >> "$GITHUB_OUTPUT"
+        echo "validation_path=$OUT_DIR/validation.json" >> "$GITHUB_OUTPUT"
+        echo "artifacts_dir=$OUT_DIR" >> "$GITHUB_OUTPUT"
+        echo "preview_mode=$MODE" >> "$GITHUB_OUTPUT"

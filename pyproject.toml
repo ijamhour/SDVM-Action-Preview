@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdvm-action-preview"
+version = "0.2.0"
+description = "SDVM Action Preview — public-safe evidence validation and preview reports"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "SDVM Team"}]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+sdvm-action-preview = "sdvm_action_preview.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sdvm_action_preview*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

@@ -1,0 +1,86 @@
+name: Product preview feedback
+description: General feedback on the SDVM Commercial Plugin / Action preview experience
+title: "[Preview feedback]: "
+labels:
+  - product-feedback
+  - preview
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share what worked and what blocked adoption in the **SDVM preview** (CLI, docs, or GitHub Action).
+
+        This is **not** a support ticket with SLA, automatic remediation, or causal diagnosis. For Action failures, prefer **GitHub Action bug report**.
+
+        Remove sensitive data before submitting.
+
+  - type: checkboxes
+    id: flow_stage
+    attributes:
+      label: Flow stage affected
+      options:
+        - label: adapt (langfuse / adapters)
+        - label: compute
+        - label: report
+        - label: capability summary
+        - label: tuning plan
+        - label: PRE/POST/DELTA (local workflow)
+        - label: GitHub Action preview (preview-report)
+        - label: docs / quickstart
+    validations:
+      required: true
+
+  - type: dropdown
+    id: usage_profile
+    attributes:
+      label: Usage profile
+      options:
+        - Local evaluation
+        - Enterprise security/compliance review
+        - Pilot preparation
+        - Internal demo
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: worked_well
+    attributes:
+      label: What worked well?
+    validations:
+      required: false
+
+  - type: textarea
+    id: blocked
+    attributes:
+      label: What blocked adoption or next steps?
+    validations:
+      required: true
+
+  - type: textarea
+    id: missing_info
+    attributes:
+      label: What information was missing?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: actionable
+    attributes:
+      label: Were outputs actionable for you?
+      options:
+        - "Yes"
+        - "Partially"
+        - "No"
+        - Unsure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: sensitive_data_confirm
+    attributes:
+      label: Data handling confirmation
+      options:
+        - label: I removed secrets, tokens, and unnecessary PII from this report
+    validations:
+      required: true

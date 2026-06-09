@@ -1,0 +1,91 @@
+name: Report quality feedback
+description: Feedback on SDVM report, capability, tuning plan, metrics, or job summary clarity
+title: "[Report quality]: "
+labels:
+  - report-quality
+  - product-quality
+  - preview
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for **quality of SDVM outputs** (clarity, recommendations, confidence, comparability).
+
+        This helps the future **Product Quality Hardening** track. It does **not** imply immediate fixes, autonomous tuning, or causal diagnosis.
+
+        **Do not** paste full sensitive traces. Use **redacted excerpts** only.
+
+  - type: checkboxes
+    id: artifact
+    attributes:
+      label: Which artifact is affected?
+      options:
+        - label: preview_report.json
+        - label: capability.json
+        - label: preview_preview_report.json
+        - label: job_summary.md
+        - label: validation.json
+        - label: Multiple / other (describe below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Problem type
+      options:
+        - Unclear wording or structure
+        - Recommendation too generic
+        - Recommendation potentially unsafe or misleading
+        - False positive (flagged issue not supported by evidence)
+        - False negative (missed obvious issue)
+        - Excess confidence / under-stated uncertainty
+        - Not actionable for an operator
+        - PRE/POST/DELTA comparability or inconsistency
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: excerpt
+    attributes:
+      label: Redacted excerpt from the output
+      description: Paste the smallest snippet needed to illustrate the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: operator_expectation
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operational_impact
+    attributes:
+      label: Does this affect an operational decision?
+      options:
+        - "Yes — blocked or misled a decision"
+        - "Somewhat — caused extra review time"
+        - "No — cosmetic or minor"
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Minimal context (no sensitive data)
+      description: e.g. local CLI vs Action preview, enrichment level, PRE-only vs DELTA comparison — without raw traces.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: sensitive_data_confirm
+    attributes:
+      label: Data handling confirmation
+      options:
+        - label: I removed secrets, tokens, and unnecessary PII from this report
+    validations:
+      required: true

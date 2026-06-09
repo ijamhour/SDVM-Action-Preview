@@ -1,0 +1,57 @@
+# Self-test / smoke: runs the public-safe SDVM Action Preview from repository root.
+name: SDVM Action self-test
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/sdvm-action-self-test.yml"
+      - "action.yml"
+      - "sdvm_action_preview/**"
+      - "examples/synthetic/**"
+      - "tests/test_public_safe_action_preview.py"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sdvm-action-self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout SDVM Action Preview
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install SDVM Action Preview
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+
+      - name: Run SDVM Action Preview
+        id: sdvm
+        uses: ./
+        with:
+          mode: preview-report
+          evidence_path: examples/synthetic/healthy/canonical.jsonl
+          out_dir: sdvm_preview_artifacts
+          write_job_summary: "true"
+
+      - name: Verify preview artifacts
+        run: |
+          set -euo pipefail
+          for artifact in preview_report.md preview_report.json validation.json job_summary.md; do
+            test -f "sdvm_preview_artifacts/${artifact}"
+          done
+
+      - name: Upload preview artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sdvm-action-self-test-artifacts
+          path: sdvm_preview_artifacts/
+          if-no-files-found: error

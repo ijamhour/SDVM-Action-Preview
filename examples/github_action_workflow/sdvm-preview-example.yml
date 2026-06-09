@@ -1,0 +1,32 @@
+# Public-safe SDVM Action Preview — preview-report over synthetic or user JSONL.
+name: SDVM Action Preview example
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sdvm-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run SDVM Action Preview
+        uses: ./
+        with:
+          mode: preview-report
+          evidence_path: examples/synthetic/healthy/canonical.jsonl
+          out_dir: sdvm_preview_artifacts
+          write_job_summary: "true"
+
+      - name: Upload preview artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sdvm-preview-artifacts
+          path: sdvm_preview_artifacts/

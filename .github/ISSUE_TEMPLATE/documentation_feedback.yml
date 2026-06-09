@@ -1,0 +1,65 @@
+name: Documentation feedback
+description: Report incorrect, unclear, or missing SDVM documentation
+title: "[Docs]: "
+labels:
+  - documentation
+  - preview
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help improve SDVM docs for operators, developers, and enterprise reviewers.
+
+        Preview documentation has **no SLA** for updates. Link to paths under `docs/`, `PLUGIN_QUICKSTART.md`, or `examples/` when possible.
+
+  - type: input
+    id: doc_path
+    attributes:
+      label: Document or page affected
+      placeholder: "docs/productization/GITHUB_ACTION_WRAPPER_V0_1.md"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Problem type
+      options:
+        - Incorrect or contradicts behavior
+        - Ambiguous / hard to follow
+        - Outdated (paths, commands, repo name)
+        - Missing example or workflow
+        - Too much detail for the audience
+        - Broken link
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Primary audience affected
+      options:
+        - Operator (run workflow locally)
+        - Developer (integrate Action/CLI)
+        - Enterprise reviewer (security/compliance)
+        - Maintainer / contributor
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: What should the doc say or show instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Optional — PR link, section heading, or screenshot description (no sensitive data).
+    validations:
+      required: false

@@ -1,0 +1,101 @@
+name: GitHub Action bug report
+description: Report a bug in the SDVM Action Preview (public-safe slice)
+title: "[Action bug]: "
+labels:
+  - bug
+  - github-action
+  - preview
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for failures in the **SDVM GitHub Action preview** (public-safe preview).
+
+        **Before you submit:**
+        - Do **not** paste secrets, tokens, credentials, or unnecessary PII.
+        - Do **not** attach full production traces publicly. Prefer a **minimal redacted** canonical JSONL fixture or a short redacted error excerpt.
+        - SDVM preview has **no SLA** and does not promise automatic fixes or causal diagnosis.
+
+        See also: `docs/productization/ACTION_SECURITY_DATA_HANDLING_V0_1.md`.
+
+  - type: input
+    id: action_ref
+    attributes:
+      label: Action version / reference
+      description: Branch, commit SHA, tag, or local path (e.g. `./.github/actions/sdvm` on `main`)
+      placeholder: "ijamhour/SDVM-Action-Preview@<tag> or commit SHA"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: input_type
+    attributes:
+      label: Primary input type
+      options:
+        - canonical JSONL (pre_canonical_path)
+        - Other / unsure
+    validations:
+      required: true
+
+  - type: input
+    id: runner_os
+    attributes:
+      label: Runner OS
+      placeholder: "ubuntu-latest, windows-latest, self-hosted Linux, etc."
+    validations:
+      required: true
+
+  - type: input
+    id: python_version
+    attributes:
+      label: Python version (if known)
+      placeholder: "3.11"
+    validations:
+      required: false
+
+  - type: textarea
+    id: workflow_yaml
+    attributes:
+      label: Relevant workflow YAML (secrets removed)
+      description: Paste only the job/steps that invoke SDVM. Remove secrets and sensitive paths.
+      render: yaml
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_excerpt
+    attributes:
+      label: Error or unexpected behavior (redacted)
+      description: Minimal log excerpt or step summary. No full traces.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: artifacts_status
+    attributes:
+      label: Artifacts
+      description: Which outputs appeared under `out_dir`?
+      options:
+        - label: preview_report.md
+        - label: preview_report.json
+        - label: validation.json
+        - label: job_summary.md
+        - label: None / step failed before artifacts
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce (minimal)
+      description: How to reproduce with a redacted fixture or public example path when possible.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: sensitive_data_confirm
+    attributes:
+      label: Data handling confirmation
+      options:
+        - label: I removed secrets, tokens, and unnecessary PII from this report
+        - label: I did not attach full sensitive traces to this issue
+    validations:
+      required: true

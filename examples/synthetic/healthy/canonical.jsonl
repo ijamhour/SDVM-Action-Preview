@@ -1,0 +1,5 @@
+{"run_id": "synthetic:demo_run_001", "ts": "2026-01-15T10:00:01Z", "actor": "planner", "event_type": "step", "payload": {"note": "synthetic preview fixture"}}
+{"run_id": "synthetic:demo_run_001", "ts": "2026-01-15T10:00:02Z", "actor": "planner", "event_type": "turn", "payload": {"note": "synthetic preview fixture"}}
+{"run_id": "synthetic:demo_run_001", "ts": "2026-01-15T10:00:03Z", "actor": "tool_runner", "event_type": "tool_call", "payload": {"target": "tool.lookup", "note": "synthetic preview fixture"}}
+{"run_id": "synthetic:demo_run_001", "ts": "2026-01-15T10:00:04Z", "actor": "tool_runner", "event_type": "tool_result", "payload": {"note": "synthetic preview fixture"}}
+{"run_id": "synthetic:demo_run_001", "ts": "2026-01-15T10:00:05Z", "actor": "planner", "event_type": "turn", "payload": {"note": "synthetic preview fixture"}}
