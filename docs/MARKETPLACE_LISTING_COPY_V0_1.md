@@ -79,7 +79,7 @@ This listing copy describes a **preview** public-safe slice. Artifact semantics 
 
 ## Basic usage draft
 
-**Draft workflow** — uses public-safe Action input names from staged `action.yml`. Pins preview tag `sdvm-action-preview-v0.2` (historical pointer unchanged).
+**Draft workflow** — uses public-safe Action input names from `action.yml`. Pins preview tag `sdvm-action-preview-public-v0.1`.
 
 ```yaml
 name: SDVM Action Preview
@@ -101,7 +101,7 @@ jobs:
           python-version: "3.11"
 
       - name: Run SDVM Action Preview
-        uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-v0.2
+        uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-public-v0.1
         with:
           mode: preview-report
           evidence_path: examples/synthetic/healthy/canonical.jsonl
@@ -111,10 +111,8 @@ jobs:
 
 **Notes:**
 
-- `sdvm-action-preview-v0.2` → commit `2f32e94` (immutable when published).  
-- `sdvm-action-preview-v0.1` → commit `1afc731` (historical, preserved).  
-- Public distribution repository **not created yet** — slug is a candidate (`SDVM-Action-Preview`).  
-- For local development after public repo creation, use `uses: ./` at repository root.  
+- `sdvm-action-preview-public-v0.1` — current public preview tag on `ijamhour/SDVM-Action-Preview`.  
+- For local development, use `uses: ./` at repository root.  
 - This listing copy draft is **not** a Marketplace publication.  
 
 ## Inputs and outputs

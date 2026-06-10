@@ -1,12 +1,11 @@
-# SDVM Action Preview v0.2 — Release Notes
+# SDVM Action Preview public-safe v0.1 — Release Notes
 
 **Status:** Public release notes (documentation only)  
-**Preview tag:** `sdvm-action-preview-v0.2` → commit `2f32e94` (immutable when published)  
-**Prior preview tag:** `sdvm-action-preview-v0.1` → commit `1afc731` (immutable, preserved)
+**Preview tag:** `sdvm-action-preview-public-v0.1` (immutable when published)
 
 ## Status
 
-`sdvm-action-preview-v0.2` is the **current preview tag** for technical evaluators.
+`sdvm-action-preview-public-v0.1` is the **current preview tag** for this public repository.
 
 It remains a preview release. It does **not** represent commercial maturity, autonomous tuning, automatic remediation, causal proof, or guaranteed workflow improvement.
 
@@ -14,11 +13,11 @@ It remains a preview release. It does **not** represent commercial maturity, aut
 
 ## Public-safe slice note
 
-When published from a future `SDVM-Action-Preview` public repository, this package provides a **limited public-safe Action slice** (`sdvm_action_preview/`). It validates evidence structure, detects PRE/POST/DELTA shape, and produces a preview report suitable for screening.
+This package provides a **limited public-safe Action slice** (`sdvm_action_preview/`). It validates evidence structure, detects PRE/POST/DELTA shape, and produces a preview report suitable for screening.
 
 **Full SDVM diagnostic analysis** (compute, scoring, playbooks, calibration) remains in the private repository and controlled pilot work only.
 
-Private-repo tags `sdvm-action-preview-v0.1` (`1afc731`) and `sdvm-action-preview-v0.2` (`2f32e94`) are **historical preview pins** on the private monorepo — not automatically mirrored to the future public distribution repository.
+Internal preview tags on the private monorepo are **not** mirrored to this public repository.
 
 ## What this public preview package is for
 
@@ -41,7 +40,7 @@ This package does **not** provide:
 ## How to use (public-safe slice)
 
 ```yaml
-- uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-v0.2
+- uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-public-v0.1
   with:
     mode: preview-report
     evidence_path: path/to/canonical.jsonl

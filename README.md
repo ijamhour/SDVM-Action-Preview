@@ -6,7 +6,7 @@ This package is a **preview** for evidence structure validation, synthetic examp
 
 ## Quick start
 
-Pin the Action at the current preview tag (when published from this repository):
+Pin the Action at the current preview tag:
 
 ```yaml
 name: SDVM Preview
@@ -28,7 +28,7 @@ jobs:
           python-version: "3.11"
 
       - name: Run SDVM Action Preview
-        uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-v0.2
+        uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-public-v0.1
         with:
           mode: preview-report
           evidence_path: path/to/canonical.jsonl
@@ -84,7 +84,7 @@ See [`SECURITY.md`](SECURITY.md) and [`SUPPORT.md`](SUPPORT.md).
 
 - [`examples/github_action_workflow/README.md`](examples/github_action_workflow/README.md) — copy-paste workflow and artifact upload
 - [`docs/ACTION_USAGE.md`](docs/ACTION_USAGE.md) — Action inputs, outputs, and job summary
-- [`docs/RELEASE_NOTES_V0_2.md`](docs/RELEASE_NOTES_V0_2.md) — release notes for `sdvm-action-preview-v0.2`
+- [`docs/RELEASE_NOTES_V0_2.md`](docs/RELEASE_NOTES_V0_2.md) — release notes for `sdvm-action-preview-public-v0.1`
 - [`docs/MARKETPLACE_LISTING_COPY_V0_1.md`](docs/MARKETPLACE_LISTING_COPY_V0_1.md) — draft listing copy (not published)
 - [`examples/synthetic/`](examples/synthetic/) — public-safe synthetic preview fixtures
 

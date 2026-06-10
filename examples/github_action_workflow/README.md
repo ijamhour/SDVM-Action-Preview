@@ -13,10 +13,10 @@ Copy-paste workflow for the **SDVM Action Preview** public-safe slice.
 
 This is **not** the full SDVM engine and **not** pilot-grade analysis.
 
-## Pin (when public repo exists)
+## Pin (published tag)
 
 ```yaml
-uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-v0.2
+uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-public-v0.1
 ```
 
 ## Local checkout

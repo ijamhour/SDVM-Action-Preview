@@ -56,4 +56,4 @@ Public-safe extract for the composite Action at repository root (`action.yml`).
 
 Canonical privacy policy: **https://sdvm.tech/privacy/**
 
-For published pins, use `ijamhour/SDVM-Action-Preview@sdvm-action-preview-v0.2` after the public repository is created.
+For published pins, use `ijamhour/SDVM-Action-Preview@sdvm-action-preview-public-v0.1`.

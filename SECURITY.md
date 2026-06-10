@@ -16,8 +16,7 @@ For **sensitive** reports, use a private contact channel documented by the repos
 
 | Version | Status |
 |---------|--------|
-| `sdvm-action-preview-v0.2` | Current preview tag (when published from this repository) |
-| `sdvm-action-preview-v0.1` | Historical preview tag (preserved) |
+| `sdvm-action-preview-public-v0.1` | Current preview tag |
 
 ## Scope
 
