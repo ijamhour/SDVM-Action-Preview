@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDVM Action Preview — Friendly Sample Report</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1a1d23;
+      --muted: #5c6570;
+      --border: #dde2e8;
+      --notice-bg: #fff8e6;
+      --notice-border: #e6c200;
+      --accent: #2d5a8a;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    header {
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 0.35rem;
+      color: var(--accent);
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin: 0;
+    }
+    .notice {
+      background: var(--notice-bg);
+      border: 1px solid var(--notice-border);
+      border-radius: 8px;
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.95rem;
+    }
+    .notice strong { display: block; margin-bottom: 0.35rem; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.15rem;
+      box-shadow: var(--card-shadow);
+    }
+    .card h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+      font-weight: 600;
+    }
+    .card .value {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.15rem 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--card-shadow);
+    }
+    section h2 {
+      font-size: 1.05rem;
+      margin: 0 0 0.75rem;
+      color: var(--text);
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    li { margin-bottom: 0.4rem; }
+    .label {
+      display: inline-block;
+      background: #e8eef4;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      margin-right: 0.35rem;
+    }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>SDVM Action Preview — Friendly Sample Report</h1>
+      <p class="subtitle">Synthetic illustration of public-safe workflow evidence screening</p>
+    </header>
+
+    <div class="notice" role="note">
+      <strong>Preview notice</strong>
+      This sample is synthetic and presentation-oriented. It illustrates how public-safe evidence screening can be communicated.
+      It does <em>not</em> represent full SDVM pilot-grade analysis and does <em>not</em> include scoring internals,
+      statistical methodology, thresholds, weights, calibration, or playbook logic.
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Evidence structure</h2>
+        <p class="value">Valid JSONL shape</p>
+        <p>Required fields present: <span class="label">run_id</span><span class="label">ts</span><span class="label">actor</span><span class="label">event_type</span></p>
+      </div>
+      <div class="card">
+        <h2>PRE/POST/DELTA shape</h2>
+        <p class="value">Present but incomplete</p>
+        <p>PRE/POST shape: Present. DELTA comparison: Plausible but incomplete. No delta scoring in public preview.</p>
+      </div>
+      <div class="card">
+        <h2>Candidate next step</h2>
+        <p class="value">Prepare authorized pilot trace package</p>
+        <p>Screening status: Partial but usable for pilot discussion.</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>What this suggests</h2>
+      <ul>
+        <li>Evidence structure is recognizable and repeatable across runs.</li>
+        <li>PRE/POST comparison may become stronger after capture refinement.</li>
+        <li>Workflow may be a candidate for controlled pilot screening — not for autonomous remediation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What remains unknown</h2>
+      <ul>
+        <li>Workflow coordination degradation patterns (requires full SDVM analysis in controlled pilot work).</li>
+        <li>Causal root cause or intervention effectiveness.</li>
+        <li>Any scored diagnostic or playbook output.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Limitations</h2>
+      <ul>
+        <li>Not the full SDVM engine — public-safe preview slice only.</li>
+        <li>Not pilot-grade SDVM analysis.</li>
+        <li>No SDVM scores, thresholds, weights, calibration, or playbook logic.</li>
+        <li>Non-blocking screening heuristics; Marketplace publication on hold.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How to use this in a pilot conversation</h2>
+      <ol>
+        <li>Open with scope: public-safe evidence screening, not full SDVM diagnostics.</li>
+        <li>Show synthetic evidence and canonical JSONL fields.</li>
+        <li>Run Action Preview CLI or GitHub Action for real Markdown/JSON outputs.</li>
+        <li>Share this friendly sample for executive readability — always with the preview notice.</li>
+        <li>Close with controlled pilot intake: full SDVM analysis remains in authorized pilot work.</li>
+      </ol>
+    </section>
+
+    <footer>
+      <p><strong>Public-safe preview only.</strong> This is a static sample — not generated by the private SDVM engine.</p>
+      <p>
+        <a href="../../README.md">Repository README</a> ·
+        <a href="../ACTION_USAGE.md">Action usage</a> ·
+        <a href="../../examples/synthetic/">Synthetic examples</a> ·
+        <a href="https://sdvm.tech/pilot/intake/">Pilot intake</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

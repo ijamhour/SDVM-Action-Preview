@@ -1,0 +1,53 @@
+{
+  "report_type": "public_safe_friendly_demo",
+  "title": "SDVM Action Preview — Friendly Sample Report",
+  "subtitle": "Synthetic illustration of public-safe workflow evidence screening",
+  "synthetic": true,
+  "preview_notice": "This sample is synthetic and presentation-oriented. It does not represent full SDVM pilot-grade analysis and does not include scoring internals, statistical methodology, thresholds, weights, calibration, or playbook logic.",
+  "screening_summary": {
+    "screening_status": "partial",
+    "screening_status_label": "Partial but usable for pilot discussion",
+    "evidence_structure": "valid_jsonl_shape",
+    "required_fields_present": true,
+    "required_fields": ["run_id", "ts", "actor", "event_type"]
+  },
+  "evidence_shape": {
+    "jsonl_parseable": true,
+    "required_fields_present": true,
+    "runs_observed": 3,
+    "actors": ["orchestrator", "agent", "reviewer"],
+    "event_types": ["run_start", "tool_call", "run_end"],
+    "pre_post_shape": "present",
+    "delta_plausibility": "partial",
+    "delta_plausibility_label": "Plausible but incomplete"
+  },
+  "what_this_suggests": [
+    "Evidence structure is recognizable and repeatable across runs.",
+    "PRE/POST comparison may become stronger after capture refinement.",
+    "Workflow may be a candidate for controlled pilot screening — not for autonomous remediation."
+  ],
+  "what_remains_unknown": [
+    "Workflow coordination degradation patterns (requires full SDVM analysis).",
+    "Causal root cause or intervention effectiveness.",
+    "Any scored diagnostic or playbook output."
+  ],
+  "candidate_next_step": "prepare_authorized_pilot_trace_package",
+  "candidate_next_step_label": "Prepare authorized pilot trace package",
+  "limitations": [
+    "not_full_sdvm_engine",
+    "not_pilot_grade_analysis",
+    "no_scoring_internals",
+    "no_statistical_methodology",
+    "no_thresholds_or_weights",
+    "no_calibration",
+    "no_playbook_logic",
+    "non_blocking_screening_heuristics_only",
+    "marketplace_on_hold"
+  ],
+  "links": {
+    "readme": "../../README.md",
+    "action_usage": "../ACTION_USAGE.md",
+    "synthetic_examples": "../../examples/synthetic/",
+    "pilot_intake": "https://sdvm.tech/pilot/intake/"
+  }
+}

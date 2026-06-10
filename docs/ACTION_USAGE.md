@@ -61,6 +61,8 @@ Pin the public preview tag in consumer workflows:
 
 **Artifacts** (under `out_dir`): `validation.json`, `preview_report.json`, `preview_report.md`, `job_summary.md`.
 
+For a human-friendly illustration of how public-safe screening can be presented, see [`docs/demo/`](demo/).
+
 ## Local development usage
 
 Testing this Action from a checkout of this repository (CI or local workflow development):
