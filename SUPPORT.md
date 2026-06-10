@@ -40,7 +40,7 @@ GitHub Marketplace publication remains **on hold** pending explicit operator app
 |----------|------|
 | [`README.md`](README.md) | Action quickstart |
 | [`docs/ACTION_USAGE.md`](docs/ACTION_USAGE.md) | Action inputs, outputs, job summary |
-| [`docs/RELEASE_NOTES_V0_2.md`](docs/RELEASE_NOTES_V0_2.md) | Current preview release notes |
+| [`docs/RELEASE_NOTES_PUBLIC_V0_1.md`](docs/RELEASE_NOTES_PUBLIC_V0_1.md) | Current preview release notes |
 
 ## Privacy
 

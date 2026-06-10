@@ -1,7 +1,7 @@
 # SDVM GitHub Action — Marketplace Listing Copy (draft v0.1)
 
 **Status:** Draft copy only — **not published**  
-**Scope:** Preparatory listing language for a future public distribution repository. Does **not** publish to GitHub Marketplace.
+**Scope:** Draft listing language for a possible future GitHub Marketplace submission. The public repository exists at `ijamhour/SDVM-Action-Preview`, but Marketplace publication remains on hold. Does **not** publish to GitHub Marketplace.
 
 ## Listing name candidates
 
@@ -161,7 +161,7 @@ Full detail: [`SECURITY.md`](../../SECURITY.md).
 
 - **Public-safe preview slice** — not full SDVM engine or pilot-grade analysis.  
 - Sufficiency and PRE/POST/DELTA signals are **preview heuristics** — not SDVM scoring.  
-- Artifact and summary copy may change before public repo publication.  
+- Artifact and summary copy may evolve before Marketplace publication.  
 - Support via GitHub Issues — **best-effort, no SLA**.  
 - **Marketplace publication remains on hold.**  
 
@@ -179,12 +179,11 @@ Use repository issue templates (`.github/ISSUE_TEMPLATE/`):
 
 This draft **does not** mean the Action is ready for Marketplace publication.
 
-Readiness is tracked in [`MARKETPLACE_READINESS_CHECKLIST_V0_1.md`](MARKETPLACE_READINESS_CHECKLIST_V0_1.md). Publication still depends on:
+The public repository is live, but Marketplace submission remains on hold pending:
 
-- public-safe copy and screenshot alignment (see repository docs for public-safe slice posture);  
-- trimmed staging exposure re-review;  
-- explicit operator approval for public repo creation and Marketplace submission;  
-- coherent public README / examples in `SDVM-Action-Preview` staging package.  
+- public-safe copy and screenshot alignment;  
+- explicit operator approval for Marketplace submission;  
+- coherent README, examples, and release posture in this repository.  
 
 **Marketplace publication:** not done. On hold.
 
@@ -210,7 +209,8 @@ Readiness is tracked in [`MARKETPLACE_READINESS_CHECKLIST_V0_1.md`](MARKETPLACE_
 
 | Doc | Role |
 |-----|------|
-| `MARKETPLACE_COPY_PUBLIC_SAFE_SLICE_REVIEW_V0_1.md` | Copy alignment review for public-safe slice |
-| `PUBLIC_SAFE_ACTION_SLICE_IMPLEMENTATION_V0_1.md` | Reduced slice implementation record |
-| `MARKETPLACE_READINESS_CHECKLIST_V0_1.md` | Readiness matrix |
-| `REPO_PRODUCT_SURFACE_V0_1.md` | Official product surfaces |
+| [`README.md`](../README.md) | Action quickstart and preview limits |
+| [`docs/ACTION_USAGE.md`](ACTION_USAGE.md) | Action inputs, outputs, and usage patterns |
+| [`SECURITY.md`](../SECURITY.md) | Security policy and supported versions |
+| [`SUPPORT.md`](../SUPPORT.md) | Support expectations and issue templates |
+| [`docs/RELEASE_NOTES_PUBLIC_V0_1.md`](RELEASE_NOTES_PUBLIC_V0_1.md) | Public v0.1 release notes |

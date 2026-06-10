@@ -1,4 +1,4 @@
-# Public-safe SDVM Action Preview — preview-report over synthetic or user JSONL.
+# Public-safe SDVM Action Preview — preview-report over user canonical JSONL.
 name: SDVM Action Preview example
 
 on:
@@ -18,10 +18,10 @@ jobs:
           python-version: "3.11"
 
       - name: Run SDVM Action Preview
-        uses: ./
+        uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-public-v0.1
         with:
           mode: preview-report
-          evidence_path: examples/synthetic/healthy/canonical.jsonl
+          evidence_path: path/to/canonical.jsonl
           out_dir: sdvm_preview_artifacts
           write_job_summary: "true"
 

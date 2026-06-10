@@ -1,7 +1,9 @@
 # SDVM Action Preview public-safe v0.1 — Release Notes
 
 **Status:** Public release notes (documentation only)  
-**Preview tag:** `sdvm-action-preview-public-v0.1` (immutable when published)
+**Public tag:** `sdvm-action-preview-public-v0.1`  
+**Release status:** draft — the public repository and public tag are live; the GitHub Release remains draft  
+**Marketplace:** on hold
 
 ## Status
 
@@ -9,11 +11,11 @@
 
 It remains a preview release. It does **not** represent commercial maturity, autonomous tuning, automatic remediation, causal proof, or guaranteed workflow improvement.
 
-**Marketplace publication remains on hold.**
+The public repository and public tag are live. The GitHub Release remains **draft**, and Marketplace publication remains **on hold**.
 
 ## Public-safe slice note
 
-This package provides a **limited public-safe Action slice** (`sdvm_action_preview/`). It validates evidence structure, detects PRE/POST/DELTA shape, and produces a preview report suitable for screening.
+This package provides a **limited public-safe Action slice** (`sdvm_action_preview/`). It validates evidence structure, detects PRE/POST/DELTA shape, and produces limited Markdown and JSON preview reports suitable for screening.
 
 **Full SDVM diagnostic analysis** (compute, scoring, playbooks, calibration) remains in the private repository and controlled pilot work only.
 
@@ -24,7 +26,7 @@ Internal preview tags on the private monorepo are **not** mirrored to this publi
 - Evidence structure validation over canonical JSONL
 - Limited sufficiency screening (`sufficient` / `partial` / `insufficient`)
 - PRE/POST/DELTA shape detection without SDVM delta scoring
-- Limited preview report for pilot screening support
+- Limited Markdown/JSON preview reports for pilot screening support
 - Synthetic examples for demonstration
 
 ## What this public preview package is not
@@ -47,6 +49,8 @@ This package does **not** provide:
     out_dir: sdvm_preview_artifacts
     write_job_summary: "true"
 ```
+
+**Artifacts** (under `out_dir`): `validation.json`, `preview_report.json`, `preview_report.md`, `job_summary.md`.
 
 See [`README.md`](../README.md) and [`examples/github_action_workflow/README.md`](../examples/github_action_workflow/README.md).
 

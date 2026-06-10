@@ -1,6 +1,6 @@
 # SDVM Action Preview
 
-SDVM is a diagnostic layer for long-horizon agentic workflows. This repository distributes the **public-safe SDVM Action Preview slice** — a reduced package for validating **canonical JSONL** evidence shape, detecting PRE/POST/DELTA plausibility, and generating a **limited preview report**.
+SDVM is a diagnostic layer for long-horizon agentic workflows. This repository distributes the **public-safe SDVM Action Preview slice** — a reduced package for validating **canonical JSONL** evidence shape, detecting PRE/POST/DELTA plausibility, and generating **limited Markdown and JSON preview reports**.
 
 This package is a **preview** for evidence structure validation, synthetic examples, and pilot screening support. It is **not** the full SDVM engine, **not** pilot-grade SDVM analysis, **not** a GitHub Marketplace publication, **not** a hosted SaaS product, and **not** a claim of commercial maturity. Scoring internals, statistical methodology, playbooks, and calibration logic remain private.
 
@@ -36,7 +36,7 @@ jobs:
           write_job_summary: "true"
 ```
 
-**Artifacts** (under `out_dir`): `preview_report.md`, `preview_report.json`, `validation.json`, `job_summary.md`.
+**Artifacts** (under `out_dir`): `validation.json`, `preview_report.json`, `preview_report.md`, `job_summary.md` — Markdown and JSON preview reports only (no HTML output).
 
 ## What you need
 
@@ -58,7 +58,9 @@ python -m sdvm_action_preview.cli \
   --output sdvm_preview_out
 ```
 
-CI smoke: `.github/workflows/sdvm-action-self-test.yml` (uses `uses: ./` at repository root).
+## Local development
+
+To test this Action from a checkout of this repository, use `uses: ./` at repository root. CI smoke: `.github/workflows/sdvm-action-self-test.yml`.
 
 ## Preview limits
 
@@ -84,7 +86,7 @@ See [`SECURITY.md`](SECURITY.md) and [`SUPPORT.md`](SUPPORT.md).
 
 - [`examples/github_action_workflow/README.md`](examples/github_action_workflow/README.md) — copy-paste workflow and artifact upload
 - [`docs/ACTION_USAGE.md`](docs/ACTION_USAGE.md) — Action inputs, outputs, and job summary
-- [`docs/RELEASE_NOTES_V0_2.md`](docs/RELEASE_NOTES_V0_2.md) — release notes for `sdvm-action-preview-public-v0.1`
+- [`docs/RELEASE_NOTES_PUBLIC_V0_1.md`](docs/RELEASE_NOTES_PUBLIC_V0_1.md) — release notes for `sdvm-action-preview-public-v0.1`
 - [`docs/MARKETPLACE_LISTING_COPY_V0_1.md`](docs/MARKETPLACE_LISTING_COPY_V0_1.md) — draft listing copy (not published)
 - [`examples/synthetic/`](examples/synthetic/) — public-safe synthetic preview fixtures
 

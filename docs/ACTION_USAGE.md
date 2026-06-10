@@ -7,7 +7,7 @@ Public-safe extract for the composite Action at repository root (`action.yml`).
 | Mode | Description |
 |------|-------------|
 | `validate-only` | Structural JSONL validation only |
-| `preview-report` | Validation + limited preview report (default) |
+| `preview-report` | Validation + limited Markdown/JSON preview report (default) |
 | `synthetic` | Run bundled synthetic example |
 
 ## Inputs
@@ -35,18 +35,46 @@ Public-safe extract for the composite Action at repository root (`action.yml`).
 ## Behavior
 
 - Installs the public-safe preview package with `pip install -e .` on the runner.
-- Validates evidence shape and emits a limited screening report.
+- Validates evidence shape and emits a limited Markdown/JSON screening report.
 - **Does not** run full SDVM scoring, playbooks, or statistical methodology.
 - No GitHub API calls, PR comments, repository writes, or external telemetry.
 
-## Example workflow snippet
+## Published Action usage
+
+Pin the public preview tag in consumer workflows:
 
 ```yaml
 - uses: actions/checkout@v4
-- uses: ./
+- uses: actions/setup-python@v5
+  with:
+    python-version: "3.11"
+- uses: ijamhour/SDVM-Action-Preview@sdvm-action-preview-public-v0.1
   with:
     mode: preview-report
     evidence_path: path/to/canonical.jsonl
+    out_dir: sdvm_preview_artifacts
+    write_job_summary: "true"
+- uses: actions/upload-artifact@v4
+  with:
+    path: sdvm_preview_artifacts/
+```
+
+**Artifacts** (under `out_dir`): `validation.json`, `preview_report.json`, `preview_report.md`, `job_summary.md`.
+
+## Local development usage
+
+Testing this Action from a checkout of this repository (CI or local workflow development):
+
+```yaml
+- uses: actions/checkout@v4
+- uses: actions/setup-python@v5
+  with:
+    python-version: "3.11"
+- uses: ./
+  with:
+    mode: preview-report
+    evidence_path: examples/synthetic/healthy/canonical.jsonl
+    out_dir: sdvm_preview_artifacts
 - uses: actions/upload-artifact@v4
   with:
     path: sdvm_preview_artifacts/
@@ -55,5 +83,3 @@ Public-safe extract for the composite Action at repository root (`action.yml`).
 ## Privacy
 
 Canonical privacy policy: **https://sdvm.tech/privacy/**
-
-For published pins, use `ijamhour/SDVM-Action-Preview@sdvm-action-preview-public-v0.1`.
