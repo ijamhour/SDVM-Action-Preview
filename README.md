@@ -4,6 +4,23 @@ SDVM is a diagnostic layer for long-horizon agentic workflows. This repository d
 
 This package is a **preview** for evidence structure validation, synthetic examples, and pilot screening support. It is **not** the full SDVM engine, **not** pilot-grade SDVM analysis, **not** a GitHub Marketplace publication, **not** a hosted SaaS product, and **not** a claim of commercial maturity. Scoring internals, statistical methodology, playbooks, and calibration logic remain private.
 
+## SDVM walkthrough demo
+
+Start here for a narrative explanation of the SDVM idea:
+
+- [`docs/demo/sdvm_walkthrough_demo.html`](docs/demo/sdvm_walkthrough_demo.html) — browser-friendly walkthrough
+- [`docs/demo/sdvm_walkthrough_demo.md`](docs/demo/sdvm_walkthrough_demo.md) — Markdown source
+
+The walkthrough explains how SDVM moves from workflow coordination friction to evidence screening and pilot readiness. It is synthetic and public-safe. It does not run the full SDVM engine and does not include scoring internals, statistical methodology, thresholds, weights, calibration, or playbook logic.
+
+The existing friendly sample report remains available as a supporting output illustration:
+
+- [`docs/demo/friendly_sample_report.html`](docs/demo/friendly_sample_report.html)
+- [`docs/demo/friendly_sample_report.md`](docs/demo/friendly_sample_report.md)
+- [`docs/demo/friendly_sample_report.json`](docs/demo/friendly_sample_report.json)
+
+**Walkthrough demo** = primary narrative demo. **Friendly sample report** = supporting screening-output illustration. **Action Preview** = executable public-safe screening layer.
+
 ## Quick start
 
 Pin the Action at the current preview tag:
@@ -62,15 +79,6 @@ python -m sdvm_action_preview.cli \
 
 To test this Action from a checkout of this repository, use `uses: ./` at repository root. CI smoke: `.github/workflows/sdvm-action-self-test.yml`.
 
-## SDVM walkthrough demo
-
-For a narrative explanation of how SDVM moves from workflow friction to evidence screening and pilot readiness, see:
-
-- [`docs/demo/sdvm_walkthrough_demo.html`](docs/demo/sdvm_walkthrough_demo.html)
-- [`docs/demo/sdvm_walkthrough_demo.md`](docs/demo/sdvm_walkthrough_demo.md)
-
-The existing [**Evidence Screening Sample**](docs/demo/friendly_sample_report.html) (`friendly_sample_report.md`, `.json`, `.html`) remains available as a public-safe illustration of screening output — a supporting artifact, not the main demo.
-
 ## Preview limits
 
 - Modes: **`validate-only`**, **`preview-report`**, **`synthetic`** — not full SDVM diagnosis.
@@ -95,7 +103,7 @@ See [`SECURITY.md`](SECURITY.md) and [`SUPPORT.md`](SUPPORT.md).
 
 - [`examples/github_action_workflow/README.md`](examples/github_action_workflow/README.md) — copy-paste workflow and artifact upload
 - [`docs/ACTION_USAGE.md`](docs/ACTION_USAGE.md) — Action inputs, outputs, and job summary
-- [`docs/demo/`](docs/demo/) — synthetic friendly sample report (presentation layer)
+- [`docs/demo/`](docs/demo/) — SDVM walkthrough demo (primary) and Evidence Screening Sample (supporting)
 - [`docs/RELEASE_NOTES_PUBLIC_V0_1.md`](docs/RELEASE_NOTES_PUBLIC_V0_1.md) — release notes for `sdvm-action-preview-public-v0.1`
 - [`docs/MARKETPLACE_LISTING_COPY_V0_1.md`](docs/MARKETPLACE_LISTING_COPY_V0_1.md) — draft listing copy (not published)
 - [`examples/synthetic/`](examples/synthetic/) — public-safe synthetic preview fixtures
