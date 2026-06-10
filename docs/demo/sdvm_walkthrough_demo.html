@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDVM Walkthrough — From Workflow Friction to Pilot Readiness</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --surface: #ffffff;
+      --text: #1a1d23;
+      --muted: #5c6570;
+      --border: #dde2e8;
+      --notice-bg: #fff8e6;
+      --notice-border: #e6c200;
+      --accent: #2d5a8a;
+      --card-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+    .hero { margin-bottom: 1.5rem; }
+    .hero h1 { font-size: 1.65rem; font-weight: 700; margin: 0 0 0.4rem; color: var(--accent); }
+    .hero .subtitle { color: var(--muted); margin: 0; font-size: 1.05rem; }
+    .notice {
+      background: var(--notice-bg);
+      border: 1px solid var(--notice-border);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.95rem;
+    }
+    .notice strong { display: block; margin-bottom: 0.4rem; }
+    .narrative {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.15rem 1.25rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.98rem;
+      box-shadow: var(--card-shadow);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.15rem;
+      box-shadow: var(--card-shadow);
+    }
+    .card h2 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin: 0 0 0.6rem;
+      font-weight: 600;
+    }
+    .card .label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 0.45rem;
+      color: var(--text);
+    }
+    .card p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.3rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--card-shadow);
+    }
+    section h2 { font-size: 1.1rem; margin: 0 0 0.75rem; }
+    section h3 { font-size: 0.95rem; margin: 1rem 0 0.5rem; color: var(--muted); }
+    ul, ol { margin: 0.5rem 0 0; padding-left: 1.3rem; }
+    li { margin-bottom: 0.35rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 0.5rem; }
+    th, td { border: 1px solid var(--border); padding: 0.5rem 0.65rem; text-align: left; }
+    th { background: #eef2f6; font-weight: 600; }
+    .tag {
+      display: inline-block;
+      background: #e8eef4;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin: 0.15rem 0.15rem 0.15rem 0;
+    }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>SDVM Walkthrough — From Workflow Friction to Pilot Readiness</h1>
+      <p class="subtitle">A synthetic, public-safe walkthrough of how SDVM starts from operational evidence</p>
+    </header>
+
+    <div class="notice" role="note">
+      <strong>Preview notice</strong>
+      This walkthrough is synthetic and public-safe. It explains the SDVM concept using a simplified scenario.
+      It does <em>not</em> run the full SDVM engine and does <em>not</em> include scoring internals,
+      statistical methodology, thresholds, weights, calibration, or playbook logic.
+    </div>
+
+    <div class="narrative">
+      In AI-assisted workflows, the problem often does not appear as a single wrong answer. It appears as
+      <strong>coordination friction</strong>: repeated handoffs, unclear checkpoints, rework, context loss,
+      and fragile transitions between agents, tools, or human reviewers. SDVM starts by asking whether the
+      workflow leaves enough operational evidence to make that degradation observable.
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Workflow</h2>
+        <p class="label">Recurring AI-assisted review</p>
+        <p>Draft → gather → review → correct → decide. Multiple runs over time.</p>
+      </div>
+      <div class="card">
+        <h2>Friction</h2>
+        <p class="label">Coordination degrades</p>
+        <p>More correction loops, unclear handoffs, repeated questions, late checkpoints.</p>
+      </div>
+      <div class="card">
+        <h2>Evidence</h2>
+        <p class="label">Canonical JSONL</p>
+        <p>run_id, ts, actor, event_type, stage, note — traceable across runs.</p>
+      </div>
+      <div class="card">
+        <h2>Screening</h2>
+        <p class="label">Action Preview</p>
+        <p>Public-safe structure check — sufficient / partial / insufficient for pilot discussion.</p>
+      </div>
+      <div class="card">
+        <h2>Pilot readiness</h2>
+        <p class="label">Controlled next step</p>
+        <p>Authorized trace package → full SDVM analysis in private controlled pilot work.</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>1. The workflow</h2>
+      <p>A team uses an AI-assisted workflow to produce recurring technical review reports. Each run passes through drafting, tool-assisted evidence gathering, review, correction, and final decision.</p>
+    </section>
+
+    <section>
+      <h2>2. The symptom</h2>
+      <p>The final report may still look acceptable, but friction appears:</p>
+      <ul>
+        <li>Same output quality, but more correction loops</li>
+        <li>Handoffs become less clear</li>
+        <li>Reviewer asks the same clarifying questions repeatedly</li>
+        <li>Tool outputs copied forward without context</li>
+        <li>Checkpoints happen late or inconsistently</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Why output review is not enough</h2>
+      <p>Final deliverable quality does not reveal coordination degradation. SDVM asks whether the <em>process</em> leaves evidence that makes friction observable across runs.</p>
+    </section>
+
+    <section>
+      <h2>4. The evidence SDVM needs</h2>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>Public-safe meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>run_id</code></td><td>Which workflow run produced the event</td></tr>
+          <tr><td><code>ts</code></td><td>When the event happened</td></tr>
+          <tr><td><code>actor</code></td><td>Human, agent, or tool role</td></tr>
+          <tr><td><code>event_type</code></td><td>Draft, handoff, review, correction, checkpoint, decision</td></tr>
+          <tr><td><code>stage</code></td><td>Where in the workflow the event occurred</td></tr>
+          <tr><td><code>note</code></td><td>Optional public-safe description</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>5. What the public Action Preview can check</h2>
+      <p><span class="tag">Parseable JSONL</span><span class="tag">Required fields</span><span class="tag">Sufficiency</span><span class="tag">PRE/POST/DELTA shape</span><span class="tag">Pilot conversation</span></p>
+      <p style="margin-top:0.75rem;color:var(--muted);font-size:0.9rem;">Does not run full coordination diagnosis, scoring, thresholds, weights, calibration, or playbook logic.</p>
+    </section>
+
+    <section>
+      <h2>6. Evidence Screening Sample</h2>
+      <p>The <a href="friendly_sample_report.html">friendly sample report</a> is a presentation layer over public-safe screening — not the full SDVM diagnostic report.</p>
+    </section>
+
+    <section>
+      <h2>7. Controlled pilot (high level)</h2>
+      <p>In a controlled pilot, the private SDVM engine would examine how coordination changes across comparable runs, where evidence suggests repeated friction, and whether interventions improve or degrade workflow coordination. Scoring and calibration details remain private.</p>
+    </section>
+
+    <section>
+      <h2>8. Why this matters</h2>
+      <p>Observable coordination degradation enables informed pilot decisions — not generic AI quality claims or blind deployment.</p>
+    </section>
+
+    <section>
+      <h2>9. Next step</h2>
+      <p>Prepare an authorized pilot trace package. Pilot intake: <a href="https://sdvm.tech/pilot/intake/">sdvm.tech/pilot/intake</a></p>
+    </section>
+
+    <section>
+      <h2>Limitations</h2>
+      <ul>
+        <li>Synthetic, presentation-oriented walkthrough — not pilot-grade analysis</li>
+        <li>No SDVM scores, S/D/V/M variables, thresholds, weights, calibration, or playbook logic</li>
+        <li>Public-safe preview only; Marketplace on hold</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p><strong>Public-safe preview only.</strong> Not generated by the private SDVM engine.</p>
+      <p>
+        <a href="sdvm_walkthrough_demo.md">Markdown</a> ·
+        <a href="friendly_sample_report.html">Evidence Screening Sample</a> ·
+        <a href="../../README.md">Repository README</a> ·
+        <a href="../ACTION_USAGE.md">Action usage</a> ·
+        <a href="https://sdvm.tech/pilot/intake/">Pilot intake</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

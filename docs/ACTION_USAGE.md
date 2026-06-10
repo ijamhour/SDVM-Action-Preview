@@ -61,7 +61,7 @@ Pin the public preview tag in consumer workflows:
 
 **Artifacts** (under `out_dir`): `validation.json`, `preview_report.json`, `preview_report.md`, `job_summary.md`.
 
-For a human-friendly illustration of how public-safe screening can be presented, see [`docs/demo/`](demo/).
+For the primary SDVM narrative demo, see [`docs/demo/sdvm_walkthrough_demo.html`](demo/sdvm_walkthrough_demo.html). For a supporting screening output illustration, see [`docs/demo/friendly_sample_report.html`](demo/friendly_sample_report.html).
 
 ## Local development usage
 

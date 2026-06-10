@@ -1,26 +1,34 @@
-# SDVM Action Preview — Friendly Demo
+# SDVM Action Preview — Demo Materials
 
-This folder contains a **synthetic, public-safe friendly sample report** for the SDVM Action Preview. It is a **presentation layer**, not the full SDVM engine and not pilot-grade analysis.
+This folder contains **synthetic, public-safe demo materials** for the SDVM Action Preview. They are presentation layers — not the full SDVM engine and not pilot-grade analysis.
 
-## What is here
+## Recommended starting point
 
-| File | Purpose |
-|------|---------|
-| [`friendly_sample_report.md`](friendly_sample_report.md) | Human-readable sample (Markdown) |
-| [`friendly_sample_report.html`](friendly_sample_report.html) | Static browser-friendly sample (no external dependencies) |
-| [`friendly_sample_report.json`](friendly_sample_report.json) | Structured mirror for integrators |
-| [`FRIENDLY_DEMO_REPORT_DESIGN_V0_1.md`](FRIENDLY_DEMO_REPORT_DESIGN_V0_1.md) | Design record for this demo |
+Start with the **SDVM Walkthrough** — the primary narrative demo:
 
-The HTML file is the primary visual artifact for sharing with non-technical readers. No screenshot PNG is included in this release.
+- [`sdvm_walkthrough_demo.html`](sdvm_walkthrough_demo.html) — browser-friendly walkthrough (recommended for sharing)
+- [`sdvm_walkthrough_demo.md`](sdvm_walkthrough_demo.md) — Markdown source
 
-## How this relates to Action Preview
+Then review the **supporting Evidence Screening Sample**:
 
-| Layer | Location | Role |
-|-------|----------|------|
-| **Action Preview** | CLI / GitHub Action | Executable evidence screening — produces `validation.json`, `preview_report.json`, `preview_report.md` |
-| **Friendly sample** | This folder | Static illustration of how screening results can be communicated |
+- [`friendly_sample_report.html`](friendly_sample_report.html) — screening output illustration
+- [`friendly_sample_report.md`](friendly_sample_report.md)
+- [`friendly_sample_report.json`](friendly_sample_report.json)
 
-Run the real preview against synthetic fixtures:
+## Demo layers
+
+| Layer | Files | Role |
+|-------|-------|------|
+| **SDVM Walkthrough** (primary) | `sdvm_walkthrough_demo.*` | Narrative — workflow friction → evidence → screening → pilot |
+| **Action Preview** (executable) | CLI / GitHub Action | Technical screening — `validation.json`, `preview_report.*` |
+| **Evidence Screening Sample** (supporting) | `friendly_sample_report.*` | How screening results can be communicated |
+
+## Design records
+
+- [`SDVM_WALKTHROUGH_DEMO_DESIGN_V0_1.md`](SDVM_WALKTHROUGH_DEMO_DESIGN_V0_1.md) — walkthrough design
+- [`FRIENDLY_DEMO_REPORT_DESIGN_V0_1.md`](FRIENDLY_DEMO_REPORT_DESIGN_V0_1.md) — friendly sample design
+
+## Run the executable preview
 
 ```bash
 pip install -e .

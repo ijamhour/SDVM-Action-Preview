@@ -62,15 +62,14 @@ python -m sdvm_action_preview.cli \
 
 To test this Action from a checkout of this repository, use `uses: ./` at repository root. CI smoke: `.github/workflows/sdvm-action-self-test.yml`.
 
-## Friendly sample report
+## SDVM walkthrough demo
 
-The Action Preview generates Markdown and JSON preview outputs. For easier human review, this repository also includes a synthetic friendly sample report:
+For a narrative explanation of how SDVM moves from workflow friction to evidence screening and pilot readiness, see:
 
-- [`docs/demo/friendly_sample_report.md`](docs/demo/friendly_sample_report.md)
-- [`docs/demo/friendly_sample_report.html`](docs/demo/friendly_sample_report.html)
-- [`docs/demo/friendly_sample_report.json`](docs/demo/friendly_sample_report.json)
+- [`docs/demo/sdvm_walkthrough_demo.html`](docs/demo/sdvm_walkthrough_demo.html)
+- [`docs/demo/sdvm_walkthrough_demo.md`](docs/demo/sdvm_walkthrough_demo.md)
 
-The sample is presentation-oriented and public-safe. It is not full SDVM pilot-grade analysis.
+The existing [**Evidence Screening Sample**](docs/demo/friendly_sample_report.html) (`friendly_sample_report.md`, `.json`, `.html`) remains available as a public-safe illustration of screening output — a supporting artifact, not the main demo.
 
 ## Preview limits
 
