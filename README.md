@@ -62,6 +62,16 @@ python -m sdvm_action_preview.cli \
 
 To test this Action from a checkout of this repository, use `uses: ./` at repository root. CI smoke: `.github/workflows/sdvm-action-self-test.yml`.
 
+## Friendly sample report
+
+The Action Preview generates Markdown and JSON preview outputs. For easier human review, this repository also includes a synthetic friendly sample report:
+
+- [`docs/demo/friendly_sample_report.md`](docs/demo/friendly_sample_report.md)
+- [`docs/demo/friendly_sample_report.html`](docs/demo/friendly_sample_report.html)
+- [`docs/demo/friendly_sample_report.json`](docs/demo/friendly_sample_report.json)
+
+The sample is presentation-oriented and public-safe. It is not full SDVM pilot-grade analysis.
+
 ## Preview limits
 
 - Modes: **`validate-only`**, **`preview-report`**, **`synthetic`** — not full SDVM diagnosis.
@@ -86,6 +96,7 @@ See [`SECURITY.md`](SECURITY.md) and [`SUPPORT.md`](SUPPORT.md).
 
 - [`examples/github_action_workflow/README.md`](examples/github_action_workflow/README.md) — copy-paste workflow and artifact upload
 - [`docs/ACTION_USAGE.md`](docs/ACTION_USAGE.md) — Action inputs, outputs, and job summary
+- [`docs/demo/`](docs/demo/) — synthetic friendly sample report (presentation layer)
 - [`docs/RELEASE_NOTES_PUBLIC_V0_1.md`](docs/RELEASE_NOTES_PUBLIC_V0_1.md) — release notes for `sdvm-action-preview-public-v0.1`
 - [`docs/MARKETPLACE_LISTING_COPY_V0_1.md`](docs/MARKETPLACE_LISTING_COPY_V0_1.md) — draft listing copy (not published)
 - [`examples/synthetic/`](examples/synthetic/) — public-safe synthetic preview fixtures
