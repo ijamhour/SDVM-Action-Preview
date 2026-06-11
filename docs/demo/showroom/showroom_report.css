@@ -417,6 +417,16 @@ td { background: var(--bg-surface); }
 
 .pilot-plan li { margin-bottom: 8px; }
 
+.attribution-boundary {
+  border-left: 4px solid var(--accent);
+  background: rgba(37, 99, 235, 0.06);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
 .interpretation-limit {
   border-left: 4px solid var(--accent-amber);
   background: var(--bg-elevated);

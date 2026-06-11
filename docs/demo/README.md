@@ -17,7 +17,7 @@ Then review the **supporting Evidence Screening Sample**:
 
 ## Public-safe showroom gallery
 
-For optional public-safe report-style showroom examples showing sanitized PRE / POST / DELTA narratives, see:
+For optional public-safe report-style examples showing how SDVM can surface workflow-friction candidates and structure PRE / POST / DELTA pilot questions, see:
 
 - [`showroom/index.html`](showroom/index.html) — report-style gallery entry (recommended for browsing)
 - [`showroom/README.md`](showroom/README.md) — Markdown source narratives
