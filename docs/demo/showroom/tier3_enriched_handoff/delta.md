@@ -29,13 +29,15 @@ The DELTA readout supports an observed reduction in handoff friction and stronge
 - Deployment-level attribution requires consistent enriched capture in production-like runs.
 - Full SDVM engine analysis remains in authorized controlled pilot work.
 
-## Pilot validation discussion
+## Evidence validation plan
+
+Questions to test whether the enriched mechanism-level readout holds across broader comparable traces:
 
 1. Confirm enriched fields are consistently captured across comparable runs.
-2. Compare PRE/POST clarification reason codes.
-3. Check whether decision context is preserved across Draft → Review.
-4. Test whether observed improvement persists beyond the curated scenario.
-5. Only then promote the mechanism from corroborated scenario readout to stronger deployment-level attribution.
+2. Compare PRE/POST clarification reason codes and handoff summaries.
+3. Check whether decision context is preserved across the highlighted handoff boundary.
+4. Test whether the observed improvement persists beyond the curated scenario.
+5. Promote the mechanism from scenario-corroborated to stronger deployment-level attribution only after broader comparable evidence supports it.
 
 ## What this does not claim
 

@@ -465,14 +465,18 @@ td { background: var(--bg-surface); }
 .finding-block { margin-bottom: 8px; }
 .finding-block:last-child { margin-bottom: 0; }
 
-.pilot-plan ol {
+.pilot-plan ol,
+.evidence-followup-plan ol,
+.evidence-validation-plan ol {
   margin: 0;
   padding-left: 1.2rem;
   font-size: 13px;
   color: var(--text-secondary);
 }
 
-.pilot-plan li { margin-bottom: 8px; }
+.pilot-plan li,
+.evidence-followup-plan li,
+.evidence-validation-plan li { margin-bottom: 8px; }
 
 .attribution-boundary {
   border-left: 4px solid var(--accent);

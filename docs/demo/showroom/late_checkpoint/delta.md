@@ -22,16 +22,15 @@ The DELTA readout compares the PRE late-checkpoint pattern with the POST trace r
 - Other friction patterns (handoff ambiguity, reviewer loops) may coexist.
 - Comparability between PRE and POST windows depends on consistent capture practices.
 
-## Public-safe pilot discussion
+## Evidence follow-up plan
 
-Use this DELTA as a pilot conversation scaffold:
+Questions to strengthen or refute the candidate attribution in a controlled comparison:
 
-1. Which PRE transitions most often skipped agreed gates?
-2. What checkpoint must occur before finalize for your workflow?
-3. Are late corrections local errors or symptoms of missing early validation?
-4. Is evidence capture strong enough for a controlled PRE/POST comparison?
-
-Candidate follow-up: authorized pilot trace package — **https://sdvm.tech/pilot/intake/**
+1. Identify where correction work accumulates late in the workflow.
+2. Check whether checkpoint timestamps, checkpoint summaries, and reason codes are available.
+3. Separate legitimate late validation from avoidable late-stage rework.
+4. Add or request minimal checkpoint evidence fields for a controlled PRE/POST comparison.
+5. Treat the late-checkpoint label as provisional until comparable traces support it.
 
 ## What this does not claim
 

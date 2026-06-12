@@ -15,9 +15,9 @@ Scenario identity: **SHOWROOM-T3-HANDOFF / public-safe synthetic derivative**
 | Surface operational friction candidates | Connect friction to a more specific mechanism |
 | Candidate attribution remains open | Candidate mechanism corroborated within scenario |
 | Limited enriched fields in evidence | Handoff summaries, owner/receiver, decision status, reason codes available |
-| Structures pilot questions | Supports stronger mechanism-level attribution readout |
+| Structures evidence follow-up questions | Supports stronger mechanism-level attribution readout |
 
-Tier 2 examples show that SDVM can surface friction and structure pilot questions. This example shows that **enriched evidence can strengthen attribution** — without claiming absolute proof or production diagnosis.
+Tier 2 examples show that SDVM can surface friction and structure evidence follow-up questions. This example shows that **enriched evidence can strengthen attribution** — without claiming absolute proof or production diagnosis.
 
 ## PRE
 

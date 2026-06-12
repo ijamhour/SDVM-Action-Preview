@@ -40,10 +40,10 @@ A useful pilot question: *Do handoffs include enough shared context that the rec
 - Causal proof that a specific change caused improvement
 - Production or customer trace data
 
-## How to discuss this with a pilot sponsor
+## Evidence follow-up questions
 
-1. **Name the pattern** — handoff ambiguity, not “bad handoffs” in general.
-2. **Point to evidence shape** — recurring clarification after stage transitions in authorized traces.
-3. **Separate map from behavior** — distinguish incomplete workflow documentation from genuine process drift.
-4. **Propose a controlled pilot** — compare PRE and POST windows after agreed capture and handoff-contract changes.
-5. **Set expectations** — full SDVM analysis remains in authorized controlled pilot work only.
+1. Which handoff boundaries concentrate clarification signals?
+2. Are handoff summaries, owner fields, and reason codes available in comparable traces?
+3. Does repeated clarification reflect missing transfer context or normal review behavior?
+4. What minimal evidence fields would support a controlled PRE/POST comparison?
+5. Treat the handoff-friction label as provisional until comparable traces support it.

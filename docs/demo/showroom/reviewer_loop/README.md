@@ -38,10 +38,10 @@ A reviewer loop is **repeated rework** visible as a coordination pattern — not
 - Proof of which lever caused improvement
 - Customer or production trace data
 
-## How to discuss this with a pilot sponsor
+## Evidence follow-up questions
 
-1. **Describe the loop** — draft and review cycling without convergence.
-2. **Separate quality from friction** — acceptable outputs can still hide expensive coordination.
-3. **Ask about context capture** — what must draft include before review is fair?
-4. **Propose PRE/POST windows** — after agreed upstream capture changes, in a controlled pilot.
-5. **Anchor scope** — full SDVM analysis stays in authorized pilot work, not this gallery.
+1. Where does review movement become repetitive rather than decision-oriented?
+2. Are review reason codes and decision-status fields available in comparable traces?
+3. Does repeated clarification reflect missing upstream context or legitimate review depth?
+4. What minimal review-readiness evidence fields would support a controlled PRE/POST comparison?
+5. Treat the reviewer-loop label as provisional until comparable traces support it.

@@ -18,6 +18,8 @@ These pages are public-safe report shells inspired by the internal SDVM showroom
 
 The gallery now includes Tier 2-style candidate readouts and one Tier 3-style enriched example. Tier 2 examples surface friction candidates; the Tier 3 example illustrates how enriched handoff, decision, and trace evidence can strengthen attribution without exposing private SDVM internals. Within each PRE/POST/DELTA scenario, observed POST improvement is real; what remains bounded is causal exclusivity and generalization.
 
+The final section of each report is an evidence follow-up plan. It explains what evidence would be needed to strengthen, weaken, or bound the candidate attribution in a controlled comparison. It is not an intervention prescription and not a commercial pilot call-to-action.
+
 ## Visual showroom reports
 
 For browser-friendly gallery entry and lighter summaries, open:
@@ -39,7 +41,7 @@ These examples are presentation-oriented illustrations. They help readers unders
 
 Each scenario folder contains four Markdown files:
 
-- `README.md` — overview and pilot discussion framing
+- `README.md` — overview and evidence follow-up framing
 - `pre.md` — situation before a workflow adjustment
 - `post.md` — situation after a workflow adjustment
 - `delta.md` — qualitative comparison between PRE and POST
@@ -66,7 +68,7 @@ The showroom gallery is a **secondary, optional** layer. Use it after the walkth
 
 The [**Action Preview**](../../README.md) is the executable public-safe screening layer. It validates canonical JSONL evidence shape and produces limited preview reports (`validation.json`, `preview_report.md`).
 
-The showroom gallery is **not** produced by the Action Preview. It does not demonstrate CLI or GitHub Action output. It illustrates how stakeholders might **read and discuss** workflow pathology narratives in a pilot conversation — not how to run screening.
+The showroom gallery is **not** produced by the Action Preview. It does not demonstrate CLI or GitHub Action output. It illustrates how stakeholders might **read candidate readouts** and structure evidence follow-up questions — not how to run screening.
 
 For a screening output illustration, see the [**friendly sample report**](../friendly_sample_report.md).
 

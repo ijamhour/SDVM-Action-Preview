@@ -17,7 +17,7 @@ Then review the **supporting Evidence Screening Sample**:
 
 ## Public-safe showroom gallery
 
-For optional public-safe report-style examples — Tier 2 friction candidates and a Tier 3 enriched attribution illustration — see:
+For optional public-safe report-style examples showing how SDVM can surface workflow-friction candidates and structure evidence follow-up questions — Tier 2 candidates and a Tier 3 enriched illustration — see:
 
 - [`showroom/index.html`](showroom/index.html) — report-style gallery entry (recommended for browsing)
 - [`showroom/README.md`](showroom/README.md) — Markdown source narratives
@@ -31,7 +31,7 @@ The showroom examples are static, synthetic/sanitized, and presentation-oriented
 | **SDVM Walkthrough** (primary) | `sdvm_walkthrough_demo.*` | Narrative — workflow friction → evidence → screening → pilot |
 | **Action Preview** (executable) | CLI / GitHub Action | Technical screening — `validation.json`, `preview_report.*` |
 | **Evidence Screening Sample** (supporting) | `friendly_sample_report.*` | How screening results can be communicated |
-| **Showroom Gallery** (optional) | `showroom/` | Static PRE/POST/DELTA narrative illustrations for pilot discussions |
+| **Showroom Gallery** (optional) | `showroom/` | Static PRE/POST/DELTA illustrations with evidence follow-up questions |
 
 ## Design records
 
