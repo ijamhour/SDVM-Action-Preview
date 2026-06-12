@@ -135,7 +135,7 @@ If screening suggests the workflow may support a controlled pilot:
 |----------|----------------|
 | **Executive / sponsor** | Read this walkthrough → open [HTML version](sdvm_walkthrough_demo.html) → skim [Evidence Screening Sample](friendly_sample_report.html) |
 | **Technical reviewer** | Read sections 4–5 → run CLI on `examples/synthetic/` → compare with screening sample |
-| **Pilot sponsor** | Sections 1–3 + 9 → pilot intake link |
+| **Evaluator / workflow owner** | Sections 1–3 + 9 → evidence intake link |
 
 ## Limitations
 

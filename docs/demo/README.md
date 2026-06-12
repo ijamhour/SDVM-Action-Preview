@@ -56,4 +56,4 @@ python -m sdvm_action_preview.cli \
 
 ## Pilot intake
 
-For controlled pilot discussions, see **https://sdvm.tech/pilot/intake/**
+For authorized controlled comparisons with richer traces, see **https://sdvm.tech/pilot/intake/**
