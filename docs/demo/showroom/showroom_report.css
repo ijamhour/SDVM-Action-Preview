@@ -195,6 +195,63 @@ body::before {
 .badge-limited { background: var(--bg-elevated); color: var(--text-muted); }
 .badge-pilot { background: #f5f0e8; color: #6a5a40; border-color: #e0d4c0; }
 
+.badge-tier3 {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(37, 99, 235, 0.35);
+}
+
+.notice-tier3 {
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.readout-line-tier3 {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.report-header-tier3 {
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+.dim-card.dim-tier3 {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.kpi-card-tier3 {
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+.friction-callout-tier3 {
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.attribution-boundary-tier3 {
+  border-left-color: var(--accent);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.mechanism-card {
+  background: rgba(37, 99, 235, 0.04);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.mechanism-card:last-child { margin-bottom: 0; }
+
 .dimension-grid {
   display: flex;
   flex-wrap: wrap;
