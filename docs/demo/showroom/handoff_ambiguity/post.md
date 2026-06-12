@@ -15,7 +15,7 @@ Instrumentation is aligned so stage labels and transition events match the decla
 
 ## Public-safe reading
 
-The POST window suggests **reduced handoff ambiguity** when contracts and map alignment improve together. Improvement is described qualitatively — as a change in evidence pattern, not as a measured outcome claim.
+POST traces show clearer transfer points after repair actions suggested from the PRE readout were applied. The improvement is **observed within this PRE/POST scenario** — described qualitatively as a change in evidence pattern, not as a measured outcome claim. What remains bounded is the causal attribution and whether the same pattern generalizes across broader comparable traces.
 
 ## What this does not claim
 

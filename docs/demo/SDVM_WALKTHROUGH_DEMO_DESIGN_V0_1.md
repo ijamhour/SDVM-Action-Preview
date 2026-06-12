@@ -40,7 +40,7 @@ The walkthrough is the **front door** for selective sharing. The friendly sample
 | Audience | What they should take away |
 |----------|----------------------------|
 | **Technical reviewer** | The repo has a real executable public-safe screening layer (Action Preview), and the walkthrough correctly scopes what it does and does not do. |
-| **Potential pilot sponsor** | The repo helps decide whether a workflow has enough evidence for a controlled SDVM pilot — not whether SDVM has already diagnosed the workflow. |
+| **Potential evaluator / workflow owner** | The repo helps decide whether a workflow has enough evidence for a controlled SDVM comparison — not whether SDVM has already diagnosed the workflow. |
 | **Executive / non-technical reader** | SDVM is about making **workflow coordination degradation observable**, not making generic claims about AI quality or answer correctness. |
 
 ## Core narrative

@@ -15,7 +15,7 @@ The friendly demo is a **static, synthetic, presentation-oriented illustration**
 | Audience | What they should understand |
 |----------|----------------------------|
 | **Technical reviewer** | The preview has a real executable evidence-screening surface — JSONL validation, sufficiency heuristics, PRE/POST/DELTA shape detection, and Markdown/JSON preview reports via CLI and GitHub Action. |
-| **Potential pilot sponsor** | The preview helps decide whether a workflow has enough evidence shape for a controlled pilot discussion — not whether SDVM has already diagnosed the workflow. |
+| **Potential evaluator / workflow owner** | The preview helps decide whether a workflow has enough evidence shape for a controlled comparison — not whether SDVM has already diagnosed the workflow. |
 | **Executive / non-technical reader** | SDVM is about **operational evidence** and **workflow coordination** readiness, not generic AI performance claims or black-box scores. |
 
 ## Demo role in the SDVM story
@@ -126,13 +126,13 @@ The friendly demo report should include these sections in order:
 
 **Scenario (synthetic):**
 
-A recurring AI-assisted workflow has multiple runs. Evidence contains actor events, timestamps, event types, and partial PRE/POST structure. The preview report classifies the evidence as **partial but usable for pilot discussion**, not as a full diagnosis.
+A recurring AI-assisted workflow has multiple runs. Evidence contains actor events, timestamps, event types, and partial PRE/POST structure. The preview report classifies the evidence as **partial but usable for evidence follow-up**, not as a full diagnosis.
 
 **Recommended sample statuses:**
 
 | Field | Sample value |
 |-------|--------------|
-| Screening status | Partial but usable for pilot discussion |
+| Screening status | Partial but usable for evidence follow-up |
 | PRE/POST/DELTA shape | Present but incomplete |
 | Candidate next step | Prepare authorized pilot trace package |
 

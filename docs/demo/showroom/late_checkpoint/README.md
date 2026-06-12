@@ -38,10 +38,10 @@ Late checkpoint pathology is about **when** coordination checks occur, not wheth
 - Proof that enforcement alone fixes root causes
 - Real customer or sponsor traces
 
-## How to discuss this with a pilot sponsor
+## Evidence follow-up questions
 
-1. **Name skip-ahead behavior** — finalize-bound work that bypasses agreed gates.
-2. **Link late discovery to rework** — corrections cost more when found near the end.
-3. **Agree on canonical path** — what must every run pass through?
-4. **Plan PRE/POST capture** — after checkpoint enforcement, in controlled pilot conditions.
-5. **Keep scope honest** — this gallery illustrates narrative shape, not engine output.
+1. Where does correction work accumulate late in the workflow?
+2. Are checkpoint timestamps, checkpoint summaries, and reason codes available in comparable traces?
+3. Does late-stage rework reflect avoidable timing issues or legitimate late validation?
+4. What minimal checkpoint evidence fields would support a controlled PRE/POST comparison?
+5. Treat the late-checkpoint label as provisional until comparable traces support it.

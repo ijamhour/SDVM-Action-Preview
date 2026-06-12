@@ -4,6 +4,10 @@
 
 Between the PRE and POST observation windows, the organization aligned handoff contracts and workflow documentation. Transfers that previously looked like unexplained detours are now easier to read as either expected paths or deliberate exceptions.
 
+## PRE/POST/DELTA framing
+
+The DELTA readout compares the PRE friction pattern with the POST trace round after repairs. It supports an **observed reduction in handoff friction** within this scenario. This strengthens the candidate attribution while keeping the specific pathology label provisional under Tier 2 evidence.
+
 ## What appears improved
 
 - Less downstream re-clarification after stage transfers.
@@ -18,16 +22,15 @@ Between the PRE and POST observation windows, the organization aligned handoff c
 - Evidence quality and cycle coverage still matter for any controlled pilot comparison.
 - Causal drivers (people, tools, policy) are not fully attributable from trace shape alone.
 
-## Public-safe pilot discussion
+## Evidence follow-up plan
 
-Use this DELTA as a **discussion template**, not a verdict:
+Questions to strengthen or refute the candidate attribution in a controlled comparison:
 
-1. Which handoffs showed the most clarification churn in PRE?
-2. What minimum recap would make POST handoffs self-explanatory?
-3. Does the workflow map need expansion, or do actors need stricter contract discipline?
-4. Is authorized evidence sufficient for a PRE/POST comparison in a controlled pilot?
-
-Candidate follow-up: prepare an authorized, de-identified trace package for pilot intake — **https://sdvm.tech/pilot/intake/**
+1. Identify which handoff boundaries concentrate clarification signals.
+2. Check whether handoff summaries, owner fields, and reason codes are available.
+3. Separate normal review behavior from repeated clarification caused by missing transfer context.
+4. Add or request minimal handoff evidence fields for a controlled PRE/POST comparison.
+5. Treat the handoff-friction label as provisional until comparable traces support it.
 
 ## What this does not claim
 

@@ -12,7 +12,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Screening status** | Partial but usable for pilot discussion |
+| **Screening status** | Partial but usable for evidence follow-up |
 | **Evidence structure** | Valid JSONL shape |
 | **Required fields** | Present (`run_id`, `ts`, `actor`, `event_type`) |
 | **Synthetic scenario** | Recurring AI-assisted workflow with multiple runs |

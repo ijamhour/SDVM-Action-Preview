@@ -4,6 +4,10 @@
 
 Between PRE and POST, upstream capture and handoff contracts at the draft-to-review boundary were strengthened. Review still happens, but it functions as a gate on complete packages rather than a repeated context-recovery stage.
 
+## PRE/POST/DELTA framing
+
+The DELTA readout compares the PRE review-loop pattern with the POST trace round after repairs. It supports an **observed reduction in repetitive review movement** within this scenario. This strengthens the candidate attribution while keeping the specific pathology label provisional under Tier 2 evidence.
+
 ## What appears improved
 
 - Less ping-pong between draft and review in trace narratives.
@@ -18,16 +22,15 @@ Between PRE and POST, upstream capture and handoff contracts at the draft-to-rev
 - Trace instrumentation must consistently capture stage intent, not only stage names.
 - Full causal attribution still requires richer evidence than trace shape alone.
 
-## Public-safe pilot discussion
+## Evidence follow-up plan
 
-Use this DELTA to structure conversation:
+Questions to strengthen or refute the candidate attribution in a controlled comparison:
 
-1. Where did PRE show the tightest draft↔review oscillation?
-2. What minimum package makes review a one-pass decision most of the time?
-3. Are loops legitimate (complex work) or symptomatic (missing context)?
-4. Is authorized evidence ready for a controlled PRE/POST pilot comparison?
-
-Candidate follow-up: controlled pilot intake with de-identified traces — **https://sdvm.tech/pilot/intake/**
+1. Identify where review movement becomes repetitive rather than decision-oriented.
+2. Check whether review reason codes and decision-status fields are available.
+3. Separate legitimate review depth from repeated clarification caused by missing upstream context.
+4. Add or request minimal review-readiness evidence fields for a controlled PRE/POST comparison.
+5. Treat the reviewer-loop label as provisional until comparable traces support it.
 
 ## What this does not claim
 
