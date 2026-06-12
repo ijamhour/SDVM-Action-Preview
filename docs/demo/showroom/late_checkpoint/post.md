@@ -15,7 +15,7 @@ Early gates catch issues when they are cheaper to fix.
 
 ## Public-safe reading
 
-The POST window suggests **fragile transitions were tightened** by moving checks earlier. Improvement is described as a change in when coordination happens, not as a quantified efficiency claim.
+POST traces show earlier or more explicit checkpointing after repair actions suggested from the PRE readout were applied. The improvement is **observed within this PRE/POST scenario** — a change in when coordination happens, not a quantified efficiency claim. What remains bounded is the causal attribution and whether the same pattern generalizes across broader comparable traces.
 
 ## What this does not claim
 

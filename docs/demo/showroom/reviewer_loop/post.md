@@ -15,7 +15,7 @@ Authors and reviewers share a minimal contract for what “ready for review” m
 
 ## Public-safe reading
 
-The POST window suggests the **review loop loosened** when context travels earlier. Improvement is qualitative: the evidence pattern shows less oscillation, not a quantified efficiency gain.
+POST traces show a more focused review pattern after repair actions suggested from the PRE readout were applied. The improvement is **observed within this PRE/POST scenario** — qualitative evidence of less oscillation, not a quantified efficiency gain. What remains bounded is the causal attribution and whether the same pattern generalizes across broader comparable traces.
 
 ## What this does not claim
 

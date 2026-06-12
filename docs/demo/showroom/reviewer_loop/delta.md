@@ -4,6 +4,10 @@
 
 Between PRE and POST, upstream capture and handoff contracts at the draft-to-review boundary were strengthened. Review still happens, but it functions as a gate on complete packages rather than a repeated context-recovery stage.
 
+## PRE/POST/DELTA framing
+
+The DELTA readout compares the PRE review-loop pattern with the POST trace round after repairs. It supports an **observed reduction in repetitive review movement** within this scenario. This strengthens the candidate attribution while keeping the specific pathology label provisional under Tier 2 evidence.
+
 ## What appears improved
 
 - Less ping-pong between draft and review in trace narratives.

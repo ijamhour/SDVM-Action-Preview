@@ -4,6 +4,10 @@
 
 Between PRE and POST, checkpoint enforcement moved earlier in the lifecycle. Runs increasingly follow the declared canonical path, and finalize-bound work passes through agreed validation stages first.
 
+## PRE/POST/DELTA framing
+
+The DELTA readout compares the PRE late-checkpoint pattern with the POST trace round after repairs. It supports an **observed improvement in checkpoint timing** within this scenario. This strengthens the candidate attribution while keeping the specific pathology label provisional under Tier 2 evidence.
+
 ## What appears improved
 
 - Skip-ahead paths that bypassed review are largely absent or explicitly excepted.

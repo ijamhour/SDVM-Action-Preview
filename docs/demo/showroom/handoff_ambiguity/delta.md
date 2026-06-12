@@ -4,6 +4,10 @@
 
 Between the PRE and POST observation windows, the organization aligned handoff contracts and workflow documentation. Transfers that previously looked like unexplained detours are now easier to read as either expected paths or deliberate exceptions.
 
+## PRE/POST/DELTA framing
+
+The DELTA readout compares the PRE friction pattern with the POST trace round after repairs. It supports an **observed reduction in handoff friction** within this scenario. This strengthens the candidate attribution while keeping the specific pathology label provisional under Tier 2 evidence.
+
 ## What appears improved
 
 - Less downstream re-clarification after stage transfers.
